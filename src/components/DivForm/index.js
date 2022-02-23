@@ -50,6 +50,19 @@ const DivSearch = styled.form`
         color: #fff;
         transform: translateY(-33px);
     }
+
+    @media only screen and (max-width: 760px) {
+        .inputSearch{
+            width: 100%;
+        }
+        .btn{
+            width: 100px;
+        }
+        span{
+            left: 40px;
+        }
+    }
+}
 `
 
 export default DivSearch

@@ -23,7 +23,7 @@ const TiltePrimary = styled.h1`
         left: -29px;
         top: 170px;
         background-repeat: no-repeat;
-        animation: move 40s infinite alternate linear;
+        animation: move 25s infinite alternate linear;
         z-index: -1;
     }
     &:before{
@@ -42,10 +42,19 @@ const TiltePrimary = styled.h1`
 
     @keyframes move{
         0%{
-            transform: translateY(-70%)
+            transform: translateY(-70%);
         }
         100%{
-            transform: translateY(70%)
+            transform: translateY(70%);
+        }
+    }
+
+    @media only screen and (max-width: 760px) {
+        &:before{
+            width: 0;
+        }
+        &{
+            margin: 0 20px;
         }
     }
 `

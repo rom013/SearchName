@@ -17,9 +17,18 @@ const Box = styled.div`
         color: #FFF;
         margin-bottom: 25px;
         font-weight: 700;
+        font-size: 1rem
     }
     ul{
         margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 760px) {
+        {
+            padding: 80px 20px;
+            width: 80%;
+            top: 38%;
+        }
     }
 `
 

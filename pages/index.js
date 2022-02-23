@@ -41,7 +41,7 @@ function HomePage() {
             <Head>
                 <title>Search Name</title>
 
-                <link rel="shortcut" type="imagex/png" href="https://freepikpsd.com/file/2019/10/Question-Mark-PNG-File.png" />
+                <link rel="shortcut icon" href="http://cdn.onlinewebfonts.com/svg/img_491257.png" />
             </Head>
             <Title props={text} />
             <ContainerGlass >
