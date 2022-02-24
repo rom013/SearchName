@@ -12,6 +12,7 @@ function HomePage() {
     const [value, setValue] = useState('')
     const [nome, setNome] = useState('')
     const [frequencia, setFrequencia] = useState('')
+    const [select, setSelect] = useState('')
 
     var v = 0
 
@@ -24,7 +25,7 @@ function HomePage() {
                 setNome(resp[0].nome)
                 const p = resp[0].res
                 p.map(({ periodo }) => {
-                    if (periodo == "[2000,2010[") {
+                    if (periodo == select) {
                         setFrequencia(resp[0].res[v].frequencia)
                         v++
                     }
@@ -41,7 +42,13 @@ function HomePage() {
             <Head>
                 <title>Search Name</title>
 
-                <link rel="shortcut icon" href="http://cdn.onlinewebfonts.com/svg/img_491257.png" />
+                <meta charset="UTF-8"/>
+                <meta name="description" content="Ferramenta que mostra a frequência dos nomes usados em determinado período"/>
+                <meta name="keywords" content="Frequencias de nomes, histograma nomes"/>
+                <meta name="author" content="Rom013"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+                <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828413.png" />
             </Head>
             <Title props={text} />
             <ContainerGlass >
@@ -64,12 +71,12 @@ function HomePage() {
                         }}
                     ><IoSearchSharp style={{ fontSize: "25px" }} /></button>
                 </DivForm>
-                <Select disabled={true} title="Os períodos estão em desenvolvimento" onChange={(e) => { console.log(e.target.value) }}>
-                    <option value="[2000,2010[">1950 - 1960</option>
-                    <option value="[2000,2010[">1960 - 1970</option>
-                    <option value="[2000,2010[">1970 - 1980</option>
-                    <option value="[2000,2010[">1980 - 1990</option>
-                    <option value="[2000,2010[">1990 - 2000</option>
+                <Select title="Os períodos estão em desenvolvimento" onChange={(e) => { setSelect(e.target.value) }}>
+                    <option value="[1950,1960[">1950 - 1960</option>
+                    <option value="[1960,1970[">1960 - 1970</option>
+                    <option value="[1970,1980[">1970 - 1980</option>
+                    <option value="[1980,1990[">1980 - 1990</option>
+                    <option value="[1990,2000[">1990 - 2000</option>
                     <option value="[2000,2010[">2000 - 2010</option>
                 </Select>
                 <TextZone nome={nome} frequencia={frequencia} />

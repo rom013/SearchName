@@ -9,7 +9,7 @@ const Select = styled.select`
     border: none;
     border-radius: 5px;
     margin-top: 20px;
-    cursor: not-allowed;
+    cursor: pointer;
     option{
         background: rgba(26, 26, 64, 1);
         border: 0;
