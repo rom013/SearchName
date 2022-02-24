@@ -53,8 +53,21 @@ const TiltePrimary = styled.h1`
         &:before{
             width: 0;
         }
+        &:after{
+            width: 100%;
+            height: 100%;
+        }
         &{
             margin: 0 20px;
+        }
+    }
+    @media only screen and (max-height: 700px) {
+        &{
+            top: 20px;
+        }
+        &:after{
+            width: 100%;
+            height: 100%;
         }
     }
 `
